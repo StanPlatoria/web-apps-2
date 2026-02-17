@@ -1,11 +1,14 @@
-<% companies = Company.all %>
-
+<style>
+  body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+  }
+</style
 <h1>My CRM</h1>
  
 <ul>
-  <% for company in companies %>
-    <li>
-      <%= company["name"] %>
-    </li>
+  <% for company in @companies %>
+<li>
+  <a href="/companies/<%= company["id"] %>"><%= company["name"] %> Details</a>
+</li>
   <% end %>
 </ul>
